@@ -1,6 +1,7 @@
 import array.ArrayCenterIndex;
 import array.ArrayOneBiggerThanTwo;
 import array.BinarySearch;
+import sort.SelectSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,9 +10,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
-        int[] array ={3,4,7,8,34,44,66,77,88};
-        int x = BinarySearch.find(array,44);
-        System.out.println(x);
+        int[] array ={7,4,5,8,2,34,44,66,77,88,25,12,47,62,14,45,31,84,100};
+
+        SelectSort.selectSort(array);
         System.out.println("======");
     }
 
