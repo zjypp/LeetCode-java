@@ -1,6 +1,7 @@
 import array.ArrayCenterIndex;
 import array.ArrayOneBiggerThanTwo;
 import array.BinarySearch;
+import sort.QuickSort;
 import sort.SelectSort;
 
 import java.util.ArrayList;
@@ -10,9 +11,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
-        int[] array ={7,4,5,8,2,34,44,66,77,88,25,12,47,62,14,45,31,84,100};
-
-        SelectSort.selectSort(array);
+        int[] array ={7,4,5,8,1,14,22};
+        String x="";
+        for (int a:array
+        ) {
+            x +=a + ",";
+        }
+        System.out.println(x);
+        QuickSort.quickSort(array,0,array.length-1);
         System.out.println("======");
     }
 
