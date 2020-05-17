@@ -7,6 +7,7 @@ public class QuickSort {
 
     public  static void quickSort(int[] array,int left,int right){
 
+        print(array);
         if(left > right){
             return;
         }
@@ -15,10 +16,10 @@ public class QuickSort {
         int  temp = array[i];
         int t;
         while (i < j ){
-            while (temp<=array[j] && i < j){
+            while (temp<=array[j] && left < right){
                 j--;
             }
-            while (temp>=array[i] && i<j){
+            while (temp>=array[i] && left<right){
                 i++;
             }
             if(i<j){
@@ -26,16 +27,22 @@ public class QuickSort {
                 array[i] = array[j];
                 array[j] = t;
             }
+            array[left] = array[i];
+            array[i] = temp;
+            print(array);
+
+            quickSort(array,left,j-1);
+            quickSort(array,j+1,right);
         }
-        array[left] = array[i];
-        array[i] = temp;
+
+    }
+
+    public static void print(int[] array){
         String x="";
         for (int a:array
              ) {
-            x +=a + ",";
+            x +=a+",";
         }
         System.out.println(x);
-        quickSort(array,left,j-1);
-        quickSort(array,j+1,right);
     }
 }
