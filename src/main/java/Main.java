@@ -15,7 +15,7 @@ public class Main {
 
         int[] array ={6,1,2, 7, 9, 3, 4, 5, 10, 8};
 
-        BubbleSort.bubbleSort(array);
+        SelectSort.selectSort(array);
         ArrayUtils.printArray(array);
         System.out.println("======");
     }
