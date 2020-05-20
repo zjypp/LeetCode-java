@@ -26,16 +26,25 @@ public class QuickSort {
                 array[i] = array[j];
                 array[j] = t;
             }
+            print(array,0);
         }
         array[left] = array[i];
         array[i] = temp;
-        String x="";
-        for (int a:array
-             ) {
-            x +=a + ",";
-        }
-        System.out.println(x);
+        print(array,1);
         quickSort(array,left,j-1);
         quickSort(array,j+1,right);
+    }
+
+    public static void print(int[] array,int loop){
+        String x ="###:";
+        if(loop > 0){
+            x="***";
+        }
+
+        for (int a:array
+             ) {
+            x +=a+",";
+        }
+        System.out.println(x);
     }
 }
