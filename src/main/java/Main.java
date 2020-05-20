@@ -2,6 +2,7 @@ import array.ArrayCenterIndex;
 import array.ArrayOneBiggerThanTwo;
 import array.BinarySearch;
 import sort.BubbleSort;
+import sort.InsertSort;
 import sort.QuickSort;
 import sort.SelectSort;
 import utils.ArrayUtils;
@@ -15,7 +16,7 @@ public class Main {
 
         int[] array ={6,1,2, 7, 9, 3, 4, 5, 10, 8};
 
-        SelectSort.selectSort(array);
+        InsertSort.insertSort(array);
         ArrayUtils.printArray(array);
         System.out.println("======");
     }
