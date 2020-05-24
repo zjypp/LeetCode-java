@@ -1,5 +1,9 @@
 package sort;
 
+import utils.ArrayUtils;
+
+import java.lang.reflect.Array;
+
 /**
  * @author jason
  */
@@ -9,42 +13,24 @@ public class SelectSort {
         if(array.length==0){
             return;
         }
-        String aa="";
-        for (int x:array
-        ) {
-            aa +=x+",";
+        ArrayUtils.printArray(array);
+
+        int len = array.length;
+        int minIndex, temp;
+        for(int i = 0; i < len - 1; i++) {
+            minIndex = i;
+            for(int j = i + 1; j < len; j++) {
+                if(array[j] < array[minIndex]) {     // 寻找最小的数
+                    minIndex = j;                 // 将最小数的索引保存
+                }
+            }
+            temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+            ArrayUtils.printArray(array);
         }
-        System.out.println(aa);
+        ArrayUtils.printArray(array);
 
-       for(int i=0;i<array.length;i++){
-           int minIndex =i;
-           int min = array[minIndex];
-           boolean swap = false;
-          for (int j=i+1;j<array.length;j++){
-              if(min> array[j]){
-                 min = array[j];
-                 minIndex = j;
-                 swap =true;
-              }
-          }
-           try {
-               Thread.sleep(100);
-           } catch (InterruptedException e) {
-               e.printStackTrace();
-           }
-           System.out.println(minIndex+"-"+array[minIndex]);
-           if(swap){
-               Swap(array,i,minIndex);
-           }
-
-           System.out.println("====");
-           String bb="";
-           for (int x:array
-           ) {
-              bb +=x+",";
-           }
-           System.out.println(bb);
-       }
 
     }
 
