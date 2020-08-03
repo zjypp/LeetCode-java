@@ -1,23 +1,17 @@
-import array.ArrayCenterIndex;
-import array.ArrayOneBiggerThanTwo;
-import array.BinarySearch;
-import sort.BubbleSort;
-import sort.InsertSort;
-import sort.QuickSort;
-import sort.SelectSort;
-import utils.ArrayUtils;
+import link.SingleLinkPojo;
+import link.SingleLinkReversal;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args){
 
-        int[] array ={6,1,2, 7, 9, 3, 4, 5, 10, 8};
-
-        InsertSort.insertSort(array);
-        ArrayUtils.printArray(array);
+        SingleLinkReversal.read(SingleLinkReversal.head);
+        System.out.println("init");
+        SingleLinkReversal.build(4);
+        SingleLinkReversal.read(SingleLinkReversal.head);
+        System.out.println("reversal");
+        SingleLinkReversal.reversal(SingleLinkReversal.head);
         System.out.println("======");
     }
 
