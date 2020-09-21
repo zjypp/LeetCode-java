@@ -1,17 +1,18 @@
-import link.SingleLinkPojo;
-import link.SingleLinkReversal;
-
-import java.util.stream.IntStream;
+import array.ArrayStack;
 
 public class Main {
     public static void main(String[] args){
 
-        SingleLinkReversal.read(SingleLinkReversal.head);
-        System.out.println("init");
-        SingleLinkReversal.build(4);
-        SingleLinkReversal.read(SingleLinkReversal.head);
-        System.out.println("reversal");
-        SingleLinkReversal.reversal(SingleLinkReversal.head);
+
+
+        ArrayStack arrayStack = new ArrayStack(3);
+        arrayStack.push("a");
+        arrayStack.push("b");
+        arrayStack.push("c");
+        arrayStack.push("d");
+        System.out.println(arrayStack.pop());
+        System.out.println(arrayStack.pop());
+        System.out.println(arrayStack.pop());
         System.out.println("======");
     }
 
