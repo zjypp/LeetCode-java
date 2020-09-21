@@ -1,3 +1,4 @@
+import array.ArrayQueue;
 import array.ArrayStack;
 
 public class Main {
@@ -5,14 +6,14 @@ public class Main {
 
 
 
-        ArrayStack arrayStack = new ArrayStack(3);
-        arrayStack.push("a");
-        arrayStack.push("b");
-        arrayStack.push("c");
-        arrayStack.push("d");
-        System.out.println(arrayStack.pop());
-        System.out.println(arrayStack.pop());
-        System.out.println(arrayStack.pop());
+        ArrayQueue arrayQueue = new ArrayQueue(3);
+        arrayQueue.enqueue("a");
+        arrayQueue.enqueue("b");
+        arrayQueue.enqueue("c");
+        arrayQueue.enqueue("d");
+        System.out.println(arrayQueue.dequeue());
+        System.out.println(arrayQueue.dequeue());
+        System.out.println(arrayQueue.dequeue());
         System.out.println("======");
     }
 
